@@ -8,10 +8,10 @@ The Pawprint represents a given Pawprint (request shared on `paw.pt`).
 
 ```json
 {
-	"paw_local_uuid":"{SOME UUID STRING}",
-	"paw_request":{ ... see Paw Request Object ... },
-	"http_request":"{SOME HTTP REQUEST}",
-	"http_response":"{SOME HTTP RESPONSE}",
+  "paw_local_uuid":"{SOME UUID STRING}",
+  "paw_request":"{ ... see Paw Request Object ... }",
+  "http_request":"{SOME HTTP REQUEST}",
+  "http_response":"{SOME HTTP RESPONSE}",
 }
 ```
 
@@ -60,27 +60,27 @@ Represents a Paw Request. Here's its structure:
 
 ```json
 {
-	"name":"string",
-	"url":"{ATTRIBUTED STRING}",
-	"method":"{ATTRIBUTED STRING}",
-	"params":[
-		{
-			"name":"{ATTRIBUTED STRING}",
-			"value":"{ATTRIBUTED STRING}",
-			"enabled":boolean
-		}
-	],
-	"headers":[
-		{
-			"name":"{ATTRIBUTED STRING}",
-			"value":"{ATTRIBUTED STRING}",
-			"enabled":boolean
-		}
-	],
-	"body":"{ATTRIBUTED STRING}",
-	"options":{
-		"{OPTION KEY}":"{OPTION_VALUE}"
-	}
+  "name":"string",
+  "url":"{ATTRIBUTED STRING}",
+  "method":"{ATTRIBUTED STRING}",
+  "params":[
+    {
+      "name":"{ATTRIBUTED STRING}",
+      "value":"{ATTRIBUTED STRING}",
+      "enabled":true
+    }
+  ],
+  "headers":[
+    {
+      "name":"{ATTRIBUTED STRING}",
+      "value":"{ATTRIBUTED STRING}",
+      "enabled":true
+    }
+  ],
+  "body":"{ATTRIBUTED STRING}",
+  "options":{
+    "{OPTION KEY}":"{OPTION_VALUE}"
+  }
 }
 ```
 
@@ -136,10 +136,10 @@ either a string or a dictionary like:
 
 ```json
 {
-	"identifier":"{DYNAMIC VALUE IDENTIFIER}",
-	"data":{
-		"{DATA KEY}":"{DATA VALUE}"
-	},
-	"evaluated":"{AN EVALUATED VALUE}"
+  "identifier":"{DYNAMIC VALUE IDENTIFIER}",
+  "data":{
+    "{DATA KEY}":"{DATA VALUE}"
+  },
+  "evaluated":"{AN EVALUATED VALUE}"
 }
 ```
