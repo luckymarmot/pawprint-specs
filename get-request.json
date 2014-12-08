@@ -1,0 +1,39 @@
+{
+	"name":"GET API v1",
+	"local_uuid":"B83A83C9-903F-4F0A-BC01-A96515731B79",
+	"url":"http://luckymarmot.com/paw/",
+	"method": "GET",
+	"params": [
+		{
+			"enabled":true,
+			"name":"q",
+			"value":"Search Query"
+		}
+	],
+	"headers":[
+		{
+			"enabled": true,
+			"name":"Authorization",
+			"value":[
+				"Bearer ",
+				{
+					"identifier":"com.luckymarmot.ResponseBodyPathDynamicValue",
+					"data":{
+						"request":null,
+						"keyPath":"auth.token",
+						"format":"json"
+					},
+					"evaluated":"2h3938ajsh19sjhas92j"
+				}
+			]
+		}
+	],
+	"options": {
+		"timeout":2,
+		"follow_redirections":true,
+		"redirect_authorization":true,
+		"redirect_method":true,
+		"send_cookies":true,
+		"store_cookies":true
+	}
+}

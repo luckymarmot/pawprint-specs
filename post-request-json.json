@@ -1,0 +1,47 @@
+{
+	"name":"POST API v1",
+	"local_uuid":"4A70E444-C77C-4CE2-8E45-564119081E6B",
+	"url":"http://luckymarmot.com/paw/",
+	"method": "POST",
+	"params": [],
+	"headers":[
+		{
+			"enabled": true,
+			"name":"Content-Type",
+			"value":"application/json"
+		},
+		{
+			"enabled": true,
+			"name":"Authorization",
+			"value":[
+				"Bearer ",
+				{
+					"identifier":"com.luckymarmot.ResponseBodyPathDynamicValue",
+					"data":{
+						"request":null,
+						"keyPath":"auth.token",
+						"format":"json"
+					},
+					"evaluated":"2h3938ajsh19sjhas92j"
+				}
+			]
+		}
+	],
+	"body": [
+		{
+			"identifier":"com.luckymarmot.JSONDynamicValue",
+			"data":{
+				"json":"some string which is proprietary to paw app"
+			},
+			"evaluated":"{\"some_json_key\":\"some_value\",\"some_json_boolean\":true,\"some_json_null\":null,\"some_json_number\":42.42}"
+		}
+	],
+	"options": {
+		"timeout":2,
+		"follow_redirections":true,
+		"redirect_authorization":true,
+		"redirect_method":true,
+		"send_cookies":true,
+		"store_cookies":true
+	}
+}
