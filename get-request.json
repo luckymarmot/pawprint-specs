@@ -1,7 +1,7 @@
 {
+	"paw_local_uuid":"4A70E444-C77C-4CE2-8E45-564119081E6B",
 	"paw_request":{
 		"name":"GET API v1",
-		"local_uuid":"B83A83C9-903F-4F0A-BC01-A96515731B79",
 		"url":"http://luckymarmot.com/paw/",
 		"method": "GET",
 		"params": [

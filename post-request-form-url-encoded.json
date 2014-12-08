@@ -1,7 +1,7 @@
 {
+	"paw_local_uuid":"4A70E444-C77C-4CE2-8E45-564119081E6B",
 	"paw_request":{
 		"name":"POST API v1",
-		"local_uuid":"4A70E444-C77C-4CE2-8E45-564119081E6B",
 		"url":"http://luckymarmot.com/paw/",
 		"method": "POST",
 		"params": [],

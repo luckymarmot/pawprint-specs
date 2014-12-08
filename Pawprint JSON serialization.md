@@ -1,13 +1,66 @@
 # Pawprint JSON serialization
 
-## Request Object
+## Pawprint Object
+
+The Pawprint represents a given Pawprint (request shared on `paw.pt`).
+
+*All fields are optional, but a Pawprint must have a least either `paw_request`, `http_request`, or `http_response`.*
+
+```json
+{
+	"paw_local_uuid":"{SOME UUID STRING}",
+	"paw_request":{ ... see Paw Request Object ... },
+	"http_request":"{SOME HTTP REQUEST}",
+	"http_response":"{SOME HTTP RESPONSE}",
+}
+```
+
+### Local UUID `paw_local_uuid`
+
+Only for Paw. To keep track of which Pawprint requests are created from a given Paw request.
+
+### Paw Request `paw_request`
+
+We probably don't need that yet on Pawprint, but need to store it to be able to import a request back to Paw. See **Paw Request Object**.
+
+### HTTP Request `http_request`
+
+A string that represents the HTTP request shared. e.g.
+
+```http
+POST / HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Host: echo.luckymarmot.com
+Connection: close
+User-Agent: Paw/2.1 (Macintosh; OS X/10.10.1) GCDHTTPRequest
+Content-Length: 90
+
+```
+
+### HTTP Response `http_response`
+
+A string that represents the HTTP response shared. e.g.
+
+```http
+HTTP/1.1 200 OK
+Server: nginx/1.4.6 (Ubuntu)
+Date: Mon, 08 Dec 2014 23:04:51 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Content-Type, X-Special-Header
+
+BODY
+```
+
+## Paw Request Object
 
 Represents a Paw Request. Here's its structure:
 
 ```json
 {
 	"name":"string",
-	"local_uuid":"{SOME UUID STRING}",
 	"url":"{ATTRIBUTED STRING}",
 	"method":"{ATTRIBUTED STRING}",
 	"params":[
@@ -34,10 +87,6 @@ Represents a Paw Request. Here's its structure:
 ### Name `name`
 
 The request name as it should appear on Paw or Pawprint.
-
-### Local UUID `local_uuid`
-
-Only for Paw. To keep track of which Pawprint requests are created from a given Paw request.
 
 ### URL `url`
 
