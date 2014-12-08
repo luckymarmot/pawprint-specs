@@ -1,39 +1,43 @@
 {
-	"name":"GET API v1",
-	"local_uuid":"B83A83C9-903F-4F0A-BC01-A96515731B79",
-	"url":"http://luckymarmot.com/paw/",
-	"method": "GET",
-	"params": [
-		{
-			"enabled":true,
-			"name":"q",
-			"value":"Search Query"
+	"paw_request":{
+		"name":"GET API v1",
+		"local_uuid":"B83A83C9-903F-4F0A-BC01-A96515731B79",
+		"url":"http://luckymarmot.com/paw/",
+		"method": "GET",
+		"params": [
+			{
+				"enabled":true,
+				"name":"q",
+				"value":"Search Query"
+			}
+		],
+		"headers":[
+			{
+				"enabled": true,
+				"name":"Authorization",
+				"value":[
+					"Bearer ",
+					{
+						"identifier":"com.luckymarmot.ResponseBodyPathDynamicValue",
+						"data":{
+							"request":null,
+							"keyPath":"auth.token",
+							"format":"json"
+						},
+						"evaluated":"2h3938ajsh19sjhas92j"
+					}
+				]
+			}
+		],
+		"options": {
+			"timeout":2,
+			"follow_redirections":true,
+			"redirect_authorization":true,
+			"redirect_method":true,
+			"send_cookies":true,
+			"store_cookies":true
 		}
-	],
-	"headers":[
-		{
-			"enabled": true,
-			"name":"Authorization",
-			"value":[
-				"Bearer ",
-				{
-					"identifier":"com.luckymarmot.ResponseBodyPathDynamicValue",
-					"data":{
-						"request":null,
-						"keyPath":"auth.token",
-						"format":"json"
-					},
-					"evaluated":"2h3938ajsh19sjhas92j"
-				}
-			]
-		}
-	],
-	"options": {
-		"timeout":2,
-		"follow_redirections":true,
-		"redirect_authorization":true,
-		"redirect_method":true,
-		"send_cookies":true,
-		"store_cookies":true
-	}
+	},
+	"http_request":"GET / HTTP/1.1\nAuthorization: Bearer 2h3938ajsh19sjhas92j\nContent-Type: application/json\nHost: echo.luckymarmot.com\nConnection: close\nUser-Agent: Paw/2.1 (Macintosh; OS X/10.10.1) GCDHTTPRequest\n\n",
+	"http_response":"HTTP/1.1 200 OK\nServer: nginx/1.4.6 (Ubuntu)\nDate: Mon, 08 Dec 2014 23:04:02 GMT\nContent-Type: text/html; charset=utf-8\nTransfer-Encoding: chunked\nConnection: close\nPaw-Thanks: Thanks for using Paw! Don't forget to rate us on the Mac App Store :)\nPaw-Joke: Let me tell you a joke!\nPaw-Visit-Us: http://luckymarmot.com\nAccess-Control-Allow-Origin: *\nAccess-Control-Allow-Headers: Content-Type, X-Special-Header\n\n\n<h1>Thanks for using Paw!</h1>\n\n<h1>Echo</h1>\n<h2>GET /</h2>\n<h2>GET parameters</h2>\n<ul>\n\t\n</ul>\n<h2>Headers</h2>\n<ul>\n\t\n\t<li>\n\t\t<span style=\"font-weight:bold;\">Authorization</span>\n\t\t<span>Bearer 2h3938ajsh19sjhas92j</span>\n\t</li>\n\t\n\t<li>\n\t\t<span style=\"font-weight:bold;\">Connection</span>\n\t\t<span>close</span>\n\t</li>\n\t\n\t<li>\n\t\t<span style=\"font-weight:bold;\">Host</span>\n\t\t<span>echo.luckymarmot.com</span>\n\t</li>\n\t\n\t<li>\n\t\t<span style=\"font-weight:bold;\">User-Agent</span>\n\t\t<span>Paw/2.1 (Macintosh; OS X/10.10.1) GCDHTTPRequest</span>\n\t</li>\n\t\n\t<li>\n\t\t<span style=\"font-weight:bold;\">X-Forwarded-For</span>\n\t\t<span>108.65.7.99</span>\n\t</li>\n\t\n</ul>\n<h2>Body</h2>\n<ul>\n\tNo request body\n</ul>\n"
 }

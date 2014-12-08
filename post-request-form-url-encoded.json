@@ -1,47 +1,51 @@
 {
-	"name":"POST API v1",
-	"local_uuid":"4A70E444-C77C-4CE2-8E45-564119081E6B",
-	"url":"http://luckymarmot.com/paw/",
-	"method": "POST",
-	"params": [],
-	"headers":[
-		{
-			"enabled": true,
-			"name":"Content-Type",
-			"value":"application/json"
-		},
-		{
-			"enabled": true,
-			"name":"Authorization",
-			"value":[
-				"Bearer ",
-				{
-					"identifier":"com.luckymarmot.ResponseBodyPathDynamicValue",
-					"data":{
-						"request":null,
-						"keyPath":"auth.token",
-						"format":"json"
-					},
-					"evaluated":"2h3938ajsh19sjhas92j"
-				}
-			]
-		}
-	],
-	"body": [
-		{
-			"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue",
-			"data":{
-				"json":"some string which is proprietary to paw app"
+	"paw_request":{
+		"name":"POST API v1",
+		"local_uuid":"4A70E444-C77C-4CE2-8E45-564119081E6B",
+		"url":"http://luckymarmot.com/paw/",
+		"method": "POST",
+		"params": [],
+		"headers":[
+			{
+				"enabled": true,
+				"name":"Content-Type",
+				"value":"application/json"
 			},
-			"evaluated":"some_key=some_value&some_number=42.42"
+			{
+				"enabled": true,
+				"name":"Authorization",
+				"value":[
+					"Bearer ",
+					{
+						"identifier":"com.luckymarmot.ResponseBodyPathDynamicValue",
+						"data":{
+							"request":null,
+							"keyPath":"auth.token",
+							"format":"json"
+						},
+						"evaluated":"2h3938ajsh19sjhas92j"
+					}
+				]
+			}
+		],
+		"body": [
+			{
+				"identifier":"com.luckymarmot.BodyFormKeyValueDynamicValue",
+				"data":{
+					"json":"some string which is proprietary to paw app"
+				},
+				"evaluated":"some_key=some_value&some_number=42.42"
+			}
+		],
+		"options": {
+			"timeout":2,
+			"follow_redirections":true,
+			"redirect_authorization":true,
+			"redirect_method":true,
+			"send_cookies":true,
+			"store_cookies":true
 		}
-	],
-	"options": {
-		"timeout":2,
-		"follow_redirections":true,
-		"redirect_authorization":true,
-		"redirect_method":true,
-		"send_cookies":true,
-		"store_cookies":true
-	}
+	},
+	"http_request":"POST / HTTP/1.1\nContent-Type: application/x-www-form-urlencoded\nHost: echo.luckymarmot.com\nConnection: close\nUser-Agent: Paw/2.1 (Macintosh; OS X/10.10.1) GCDHTTPRequest\nContent-Length: 90\n\nsome_json_key=some_value&some_json_boolean=true&some_json_null=null&some_json_number=42.42",
+	"http_response":"HTTP/1.1 200 OK\nServer: nginx/1.4.6 (Ubuntu)\nDate: Mon, 08 Dec 2014 23:04:51 GMT\nContent-Type: text/html; charset=utf-8\nTransfer-Encoding: chunked\nConnection: close\nPaw-Thanks: Thanks for using Paw! Don't forget to rate us on the Mac App Store :)\nPaw-Joke: Let me tell you a joke!\nPaw-Visit-Us: http://luckymarmot.com\nAccess-Control-Allow-Origin: *\nAccess-Control-Allow-Headers: Content-Type, X-Special-Header\n\n\n<h1>Thanks for using Paw!</h1>\n\n<h1>Echo</h1>\n<h2>POST /</h2>\n<h2>GET parameters</h2>\n<ul>\n\t\n</ul>\n<h2>Headers</h2>\n<ul>\n\t\n\t<li>\n\t\t<span style=\"font-weight:bold;\">Connection</span>\n\t\t<span>close</span>\n\t</li>\n\t\n\t<li>\n\t\t<span style=\"font-weight:bold;\">Host</span>\n\t\t<span>echo.luckymarmot.com</span>\n\t</li>\n\t\n\t<li>\n\t\t<span style=\"font-weight:bold;\">User-Agent</span>\n\t\t<span>Paw/2.1 (Macintosh; OS X/10.10.1) GCDHTTPRequest</span>\n\t</li>\n\t\n\t<li>\n\t\t<span style=\"font-weight:bold;\">X-Forwarded-For</span>\n\t\t<span>108.65.7.99</span>\n\t</li>\n\t\n</ul>\n<h2>Body</h2>\n<ul>\n\tsome_json_key=some_value&amp;some_json_boolean=true&amp;some_json_null=null&amp;some_json_number=42.42\n</ul>\n"
 }
